@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count the number of vowels in a given string</title>
+    
+</head>
+
+
+<body>
+
+
+  <label>Enter a string to find no of vowels</label>
+<input type="text" id="txt">
+
+<button class="btn">Click Me</button>
+
+<p class="output"></p>
+    <script>
+         let clickBtn = document.querySelector('.btn');
+       clickBtn.addEventListener('click', countVowels);
+
+       function countVowels(){
+
+        let str = document.getElementById('txt').value;
+
+        console.log(str)
+
+        var m = str.match(/[aeiou]/gi); // (g makes it search the whole string, i makes it case-insensitive) 
+       result =  m === null ? 0 : m.length;
+
+
+         document.querySelector('.output').innerHTML = "Count the number of vowels in a given string = " + result;
+
+       }
+
+
+    </script>
+</body>
+</html>
